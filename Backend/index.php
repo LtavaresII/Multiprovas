@@ -14,7 +14,12 @@
         <a href="/Perguntas Postadas.php">Perguntas Postadas</a>
     </aside>
 
-    
+    <?php
+
+        include('classes/Pergunta.classe.php');
+        
+
+    ?>
 
     <main>
 		<form action="Perguntas Postadas.php" method="post">
