@@ -22,7 +22,6 @@
     		<input type="radio" name="resposta" value="C"> <label> C) <?php echo $_POST['respostaC']; ?> </label> <br>
             <input type="radio" name="resposta" value="D"> <label> D) <?php echo $_POST['respostaD']; ?> </label> <br>
             <input type="radio" name="resposta" value="E"> <label> E) <?php echo $_POST['respostaE']; ?> </label> <br>
-    		<input type="hidden" name="respostacorreta" value="<?php echo $respostacorreta; ?>"> 
     		<input type="submit" name="acao" value="Enviar">
     	</form>
     </main>

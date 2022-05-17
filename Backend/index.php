@@ -19,10 +19,10 @@
         include('classes/Pergunta.classe.php');
 
         if(isset($_POST['acao'])){
-            $arr = array($_POST['respostaA'],$_POST['respostaB'],$_POST['respostaC'],$_POST['respostaD'],$_POST['respostaE']);
+            $arr = array($_GET['respostaA'],$_GET['respostaB'],$_GET['respostaC'],$_GET['respostaD'],$_GET['respostaE']);
             $q = count($arr);
 
-            $Q = new Pergunta($_POST['pergunta'],$q,$arr,$_POST['respostacorreta']);
+            $Q->Cadastrar_Questão($_GET['pergunta'],$q,$arr,$_GET['respostacorreta']);
         }
 
     ?>

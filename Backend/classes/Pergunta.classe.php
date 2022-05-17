@@ -7,11 +7,12 @@
 		private $quantas;
 		private $respostacorreta;
 
-		function __construct($pergunta,$quantas,$respostas,$respostacorreta){
+		public function Cadastrar_Questão($pergunta,$quantas,$respostas,$respostacorreta){
 			$this->pergunta = $pergunta;
 			$this->quantas = $quantas;
 			$this->respostas = $respostas;
 			$this->respostacorreta = $respostacorreta;
+
 		}
 
 		public function Comparar_Resposta($resposta){
@@ -47,17 +48,7 @@
 
 	}
 
-/**
- * 
- */
-class ClassName extends AnotherClass
-{
-	
-	function __construct(argument)
-	{
-		// code...
-	}
-}
+	$Q = new Pergunta();
 
 ?>
 
