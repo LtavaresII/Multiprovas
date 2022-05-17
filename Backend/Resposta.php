@@ -16,11 +16,11 @@
     </aside>
 
     <?php
-    	if (@$_POST['resposta'] == @$_POST['respostacorreta']) {
-    		echo 'Resposta Correta';	    	
-    	}else {
-    		echo 'Resposta Errada';
-    	}
+
+        include('classes/Pergunta.classe.php');
+
+        $Q->Comparar_Resposta($_POST['resposta']);
+    	
     ?>
 
 </body>

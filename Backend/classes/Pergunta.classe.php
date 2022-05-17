@@ -2,18 +2,13 @@
 
 	class Pergunta{
 		
-		private $pergunta = '';
-		private $respostas = [];
-		private $quantas = 0;
-		private $respostacorreta = '';
+		private $pergunta;
+		private $respostas;
+		private $quantas;
+		private $respostacorreta;
 
-		public function Armazenar_Pergunta($pergunta){
-			// Armazenar as questões
+		function __construct($pergunta,$quantas,$respostas,$respostacorreta){
 			$this->pergunta = $pergunta;
-		}
-
-		public function Armazenar_Respostas($quantas,$respostas,$respostacorreta){
-			// Armazenar as respostas
 			$this->quantas = $quantas;
 			$this->respostas = $respostas;
 			$this->respostacorreta = $respostacorreta;
@@ -28,17 +23,9 @@
 			}
 		}
 
-		public function setPergunta($pergunta){
-			$this->pergunta = $pergunta;
-		}
-
 		public function getPergunta(){
 			echo $this->pergunta;
 			echo "<br />";
-		}
-
-		public function setQuantas($quantas){
-			$this->quantas = $quantas;
 		}
 
 		public function getQuantas(){
@@ -46,26 +33,31 @@
 			echo "<br />";
 		} 
 
-		public function setRespostas($respostas){
-			$this->respostas = $respostas;
-		}
-
 		public function getRespostas(){
-			for($i=0;$i<$this->quantas;$i++){
+			for($i=0;$i < $this->quantas;$i++){
 				echo $this->respostas[$i];
 				echo "<br />";
 			}
 		}
 
-		public function setResposraCorreta($respostacorreta){
-			$this->respostacorreta = $respostacorreta;
-		}
-
-		public function getResposraCorreta(){
+		public function getRespostaCorreta(){
 			echo $this->respostacorreta;
 			echo "<br />";
-		} 
+		}
 
 	}
 
+/**
+ * 
+ */
+class ClassName extends AnotherClass
+{
+	
+	function __construct(argument)
+	{
+		// code...
+	}
+}
+
 ?>
+

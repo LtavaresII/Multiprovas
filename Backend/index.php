@@ -17,7 +17,13 @@
     <?php
 
         include('classes/Pergunta.classe.php');
-        
+
+        if(isset($_POST['acao'])){
+            $arr = array($_POST['respostaA'],$_POST['respostaB'],$_POST['respostaC'],$_POST['respostaD'],$_POST['respostaE']);
+            $q = count($arr);
+
+            $Q = new Pergunta($_POST['pergunta'],$q,$arr,$_POST['respostacorreta']);
+        }
 
     ?>
 
@@ -32,11 +38,17 @@
                 <input type="text" name="respostaB" size="30"/><br>
                 <label >Resposta C:</label>
                 <input type="text" name="respostaC" size="30"/><br>
+                <label >Resposta D:</label>
+                <input type="text" name="respostaD" size="30"/><br>
+                <label >Resposta E:</label>
+                <input type="text" name="respostaE" size="30"/><br>
                 <label >Resposta Correta:</label>
                 <select name="respostacorreta">
                     <option>A</option>
                     <option>B</option>
                     <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
                 </select>
                 <br /><br />
             <input type="submit" name="acao" value="Enviar">

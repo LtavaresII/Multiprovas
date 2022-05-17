@@ -1,23 +1,34 @@
 <?php 
 
 	include('Pergunta.classe.php');
-	class Prova extends Pergunta{
+	class Prova{
 
-		private $num = 0;
-		private $gabarito = [];
+		private $num;
+		private $gabarito;
+
+		function __construct($num = 0,$gabarito = array()){
+			$this->num = $num;
+			$this->gabarito = $gabarito;
+		}
 
 		public function Adicionar_Pergunta($pergunta,$quantas,$respostas,$respostacorreta){
 			// Adicionar questões na prova e armazenar o gabarito
-			this->Armazenar_Pergunta($pergunta);
-			this->Armazener_Respostas($quantas,$respostas,$respostacorreta);
-			this->num = $num++;
-			array_push($gabarito, $respostacorreta);
+			$Q = new Pergunta();
+			$Q->setPergunta($pergunta);
+			$Q->setQuantas($quantas);
+			$Q->setRespostas($respostas);
+			$Q->setRespostaCorreta($respostacorreta);
+			self::Armazenar_Gabarito($respostacorreta);
+		}
 
+		public function Armazenar_Gabarito($respostacorreta){
+			$this->num = $this->num++;
+			array_push($this->gabarito, $respostacorreta);
 		}
 
 		public function Gabarito(){
 			// Mostrar o gabarito
-			for ($i=0;$i<$this->num;$i++){
+			for ($i=0;$i < $this->num;$i++){
 				echo this->gabarito[$i];
 				echo "<br />"; 
 			}
