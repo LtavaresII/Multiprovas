@@ -20,6 +20,7 @@
         include('classes/Pergunta.classe.php');
 
         $Q->Comparar_Resposta($_POST['resposta']);
+        $Q->getRespostaCorreta();
     	
     ?>
 

@@ -8,6 +8,7 @@
 		private $respostacorreta;
 
 		public function Cadastrar_Questão($pergunta,$quantas,$respostas,$respostacorreta){
+			// Cadastrar a questão, as respostas e a resposta correta
 			$this->pergunta = $pergunta;
 			$this->quantas = $quantas;
 			$this->respostas = $respostas;
