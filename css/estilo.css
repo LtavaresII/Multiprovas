@@ -1,0 +1,142 @@
+body{
+    font-family: "Rubik", sans-serif;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.menu{
+   min-width: 250px;
+   max-width: 250px;
+   position: fixed;
+   height: 100%;
+   z-index: 10;
+}
+.menu-item:hover{
+    background-color: #334D75;
+}
+
+.conteudo{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 250px);
+    left: 250px;
+    text-align: center;
+}
+
+.bg-pag-inicial
+{
+    background-color: #828D9E;
+}
+
+.bg-interno{
+    background-color: #DFDFDF;
+}
+
+.janela{
+    margin-top: 30vh;
+}
+.login i{
+    font-size: 100px;
+}
+
+.login
+{
+    background-color: #D7D3C5;
+    border-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity));
+    border-style: solid;
+    border-width: medium;
+}
+
+.meu-btn{
+    color: #fff;
+    background-color: #334D75;
+    border-color: #334D75;
+}
+
+.btn-c{
+    color: #4ED157;
+    background-color: #212529;
+    border-color: #212529;
+}
+
+.btn-x{
+    color: #D33434;
+    background-color: #212529;
+    border-color: #212529;
+}
+
+.meu-btn i{
+    height: 20px;
+    min-width: 1em;
+    position: relative;
+    top: 0.1em;
+}
+
+.btn-c i, .btn-x i{
+    font-size: 1.5em;
+    height: 20px;
+    min-width: 1em;
+    position: relative;
+    top: 0.1em;
+}
+
+
+.meu-btn:hover{
+    color: #fff;
+    cursor: pointer;
+    background-color: #445C80;
+}
+
+.btn-c:hover{
+    color: #A5EFAA;
+}
+
+.btn-x:hover{
+    color: #FF8B8B;
+}
+
+.header-interno{
+    background-color: aquamarine;
+        
+}
+
+.disciplina{
+    position: relative;
+    max-width: 400px;
+    min-width: 300px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+.disciplina i {
+    font-size: 2em;
+}
+
+.turmas{
+    position: relative;
+    max-width: 150px;
+    min-width: 100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avaliacoes{
+    position: relative;
+    max-width: 350px;
+    min-width: 300px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+}
+
+.avaliacoes a{
+    text-decoration: none;
+}
+
+.questao label{
+    font-weight: bold;
+}
